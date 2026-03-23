@@ -177,26 +177,6 @@
 
     .source { font-size: 0.7rem; color: var(--dim); margin-top: 6px; }
 
-    /* Notes textarea */
-    .slide-notes { width: 100%; max-width: 1080px; margin-top: 12px; }
-    .slide-notes textarea {
-      width: 100%; height: 48px; padding: 8px 12px;
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 8px; font-family: inherit; font-size: 0.8rem;
-      color: var(--text); resize: vertical; outline: none; transition: border-color 0.2s;
-    }
-    .slide-notes textarea::placeholder { color: var(--dim); }
-    .slide-notes textarea:focus { border-color: var(--accent); }
-
-    .copy-all-btn {
-      position: fixed; bottom: 20px; right: 24px; z-index: 200;
-      background: var(--accent); color: white; border: none;
-      padding: 8px 18px; border-radius: 8px; font-family: inherit;
-      font-size: 0.78rem; font-weight: 600; cursor: pointer;
-      transition: all 0.2s;
-    }
-    .copy-all-btn:hover { background: #2563eb; }
-    .copy-all-btn.copied { background: var(--green); }
 
     /* Nav */
     .nav {
@@ -883,8 +863,6 @@ pie title 100M Signal Users
 
 </div>
 
-<button class="copy-all-btn" onclick="copyAllNotes()">Copy All Notes</button>
-
 <!-- Navigation -->
 <div class="nav">
   <button id="prev" aria-label="Previous slide">&#8592;</button>
@@ -931,21 +909,6 @@ pie title 100M Signal Users
   const counter = document.getElementById('counter');
   let current = 0;
 
-  // Inject notes textarea into each slide
-  slides.forEach((slide, i) => {
-    const wrap = document.createElement('div');
-    wrap.className = 'slide-notes';
-    const ta = document.createElement('textarea');
-    ta.id = 'notes-' + i;
-    ta.placeholder = 'Notes for slide ' + (i + 1) + ': ' + slideNames[i] + '...';
-    ta.addEventListener('keydown', (e) => e.stopPropagation());
-    ta.addEventListener('input', () => localStorage.setItem('sigstack-note-' + i, ta.value));
-    const saved = localStorage.getItem('sigstack-note-' + i);
-    if (saved) ta.value = saved;
-    wrap.appendChild(ta);
-    slide.appendChild(wrap);
-  });
-
   // Create dots
   slides.forEach((_, i) => {
     const dot = document.createElement('div');
@@ -974,22 +937,6 @@ pie title 100M Signal Users
   });
 
   // Copy all notes
-  function copyAllNotes() {
-    const lines = [];
-    slides.forEach((_, i) => {
-      const ta = document.getElementById('notes-' + i);
-      const text = ta ? ta.value.trim() : '';
-      lines.push('## Slide ' + (i + 1) + ': ' + slideNames[i]);
-      lines.push(text || '(no notes)');
-      lines.push('');
-    });
-    navigator.clipboard.writeText(lines.join('\n')).then(() => {
-      const btn = document.querySelector('.copy-all-btn');
-      btn.textContent = 'Copied!';
-      btn.classList.add('copied');
-      setTimeout(() => { btn.textContent = 'Copy All Notes'; btn.classList.remove('copied'); }, 2000);
-    });
-  }
 </script>
 </body>
 </html>
