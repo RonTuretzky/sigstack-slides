@@ -498,7 +498,7 @@ web/                         # React + Vite verification frontend</div>
           <li><strong>2023:</strong> 55M</li>
           <li><strong>2025:</strong> 70&ndash;100M MAU</li>
         </ul>
-        <div class="source">Source: Business of Apps, Backlinko</div>
+        <div class="source">Source: <a href="https://market.biz/signal-statistics/" target="_blank">Market.biz</a>, <a href="https://www.demandsage.com/signal-statistics/" target="_blank">DemandSage</a></div>
       </div>
       <div class="card card-green">
         <h3>Who Uses Signal</h3>
@@ -509,14 +509,14 @@ web/                         # React + Vite verification frontend</div>
           <li>Disproportionately: developers, journalists, activists, legal professionals</li>
           <li>Higher willingness to pay for privacy</li>
         </ul>
-        <div class="source">Source: World Population Review, Engagecoders</div>
+        <div class="source">Source: <a href="https://worldpopulationreview.com/country-rankings/signal-users-by-country" target="_blank">World Population Review</a></div>
       </div>
       <div class="card card-purple">
         <h3>The Privacy AI Gap</h3>
         <ul>
-          <li>Venice.ai: <strong>2M+ users</strong> paying $10/mo for private AI</li>
-          <li>Proton Lumo launched 2025 with zero-access AI &mdash; immediate demand</li>
-          <li>Confer: $34.99/mo private AI chat</li>
+          <li><a href="https://venice.ai/pricing" target="_blank">Venice.ai</a>: <strong>2M+ users</strong> paying $10/mo for private AI</li>
+          <li><a href="https://lumo.proton.me/" target="_blank">Proton Lumo</a> launched 2025 with zero-access AI &mdash; immediate demand</li>
+          <li><a href="https://confer.ai/" target="_blank">Confer</a>: $34.99/mo private AI chat</li>
           <li><strong>0 of these</strong> work natively in Signal</li>
           <li>Signal users are forced to leave their secure environment to use AI</li>
         </ul>
@@ -545,6 +545,29 @@ web/                         # React + Vite verification frontend</div>
         <div class="stat-box">
           <div class="stat-num purple">100M</div>
           <div class="stat-label">Signal MAU = addressable market</div>
+        </div>
+      </div>
+
+      <div class="g2" style="margin-bottom:20px;">
+        <div class="card" style="padding:16px;">
+          <h3 style="text-align:center;color:var(--text);font-size:0.85rem;margin-bottom:10px;">AI Chatbot Market Share 2026</h3>
+          <pre class="mermaid">
+pie title Market Share
+    "ChatGPT" : 68
+    "Google Gemini" : 18
+    "Claude" : 5
+    "Venice/Private AI" : 3
+    "Others" : 6
+          </pre>
+        </div>
+        <div class="card" style="padding:16px;">
+          <h3 style="text-align:center;color:var(--text);font-size:0.85rem;margin-bottom:10px;">Privacy-First AI: Underserved Market</h3>
+          <pre class="mermaid">
+pie title 100M Signal Users
+    "Want AI but won't use non-private tools" : 55
+    "Use mainstream AI despite concerns" : 30
+    "Don't use AI" : 15
+          </pre>
         </div>
       </div>
 
@@ -789,59 +812,7 @@ web/                         # React + Vite verification frontend</div>
     </div>
   </div>
 
-  <!-- ====== SLIDE 13: Pricing ====== -->
-  <div class="slide">
-    <h2>Pricing</h2>
-    <div class="divider"></div>
-    <div class="g3">
-      <div class="card" style="text-align:center;border:2px solid var(--border);">
-        <div style="font-size:0.75rem;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:0.06em;">Free</div>
-        <div style="font-size:2.4em;font-weight:900;color:var(--text);margin:6px 0;">$0</div>
-        <div style="font-size:0.8rem;color:var(--dim);margin-bottom:14px;">forever</div>
-        <ul>
-          <li>15 AI queries/day</li>
-          <li>5 translations/day</li>
-          <li>5 summaries/day</li>
-          <li>Standard models</li>
-          <li>TEE-verified processing</li>
-        </ul>
-      </div>
-      <div class="card" style="text-align:center;border:2px solid var(--accent);position:relative;">
-        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:white;padding:3px 14px;border-radius:20px;font-size:0.7rem;font-weight:700;">RECOMMENDED</div>
-        <div style="font-size:0.75rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;">Pro</div>
-        <div style="font-size:2.4em;font-weight:900;color:var(--text);margin:6px 0;">$19<span style="font-size:0.4em;font-weight:500;color:var(--muted);">/mo</span></div>
-        <div style="font-size:0.8rem;color:var(--dim);margin-bottom:14px;">all services bundled</div>
-        <ul>
-          <li>Unlimited AI queries</li>
-          <li>Unlimited translations (50+ langs)</li>
-          <li>Unlimited summaries</li>
-          <li>Advanced models</li>
-          <li>Priority processing</li>
-          <li>Conditional recall</li>
-          <li>Attestation receipts</li>
-        </ul>
-      </div>
-      <div class="card" style="text-align:center;border:2px solid var(--accent2);">
-        <div style="font-size:0.75rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.06em;">Team</div>
-        <div style="font-size:2.4em;font-weight:900;color:var(--text);margin:6px 0;">$49<span style="font-size:0.4em;font-weight:500;color:var(--muted);">/mo</span></div>
-        <div style="font-size:0.8rem;color:var(--dim);margin-bottom:14px;">up to 10 users</div>
-        <ul>
-          <li>Everything in Pro</li>
-          <li>Multi-user billing</li>
-          <li>Shared glossaries</li>
-          <li>Sealed-bid negotiation</li>
-          <li>Custom system prompts</li>
-          <li>Admin dashboard</li>
-          <li>HIPAA/SOC2 compliance</li>
-        </ul>
-      </div>
-    </div>
-    <div style="margin-top:14px;font-size:0.82rem;color:var(--dim);text-align:center;">
-      <strong style="color:var(--muted);">Infrastructure cost:</strong> ~$0.01&ndash;0.03/query (LLM API) + $20&ndash;100/mo TEE hosting &rarr; <strong style="color:var(--accent);">break-even at ~15 paid users</strong>
-    </div>
-  </div>
-
-  <!-- ====== SLIDE 14: Roadmap ====== -->
+  <!-- ====== SLIDE 13: Roadmap ====== -->
   <div class="slide">
     <h2>Roadmap</h2>
     <div class="divider"></div>
@@ -868,24 +839,6 @@ web/                         # React + Vite verification frontend</div>
           <li>Group chat integration</li>
         </ul>
       </div>
-      <div class="card card-orange">
-        <h3>Later &mdash; Scale</h3>
-        <ul>
-          <li>Confidential GPU inference (NVIDIA H100)</li>
-          <li>Custom fine-tuned models per team</li>
-          <li>MobileCoin payments (native Signal pay)</li>
-          <li>API for developers to build TEE-backed Signal bots</li>
-        </ul>
-      </div>
-      <div class="card card-purple">
-        <h3>Vision</h3>
-        <ul>
-          <li>SigStack SDK: anyone can build private AI bots on Signal + TEE</li>
-          <li>Expand to Element/Matrix</li>
-          <li>On-premise TEE deployment for enterprises</li>
-          <li>Decentralized inference (community-run enclaves)</li>
-        </ul>
-      </div>
     </div>
   </div>
 
@@ -907,9 +860,6 @@ web/                         # React + Vite verification frontend</div>
         <h3>What We Need</h3>
         <ul>
           <li><strong>Shape Rotator Accelerator spot</strong> &mdash; mentorship, IC3 network, up to $50K</li>
-          <li><strong>TEE infrastructure credits</strong> &mdash; confidential GPU inference at scale</li>
-          <li><strong>Early adopters</strong> &mdash; journalists, legal teams, privacy orgs for beta</li>
-          <li><strong>Security audit</strong> &mdash; independent review of attestation and enclave security</li>
         </ul>
       </div>
     </div>
@@ -929,11 +879,6 @@ web/                         # React + Vite verification frontend</div>
         Join Signal Group
       </a>
     </div>
-    <div style="display:flex;gap:10px;margin-top:14px;">
-      <span class="tag tag-blue">Shape Rotator 2026</span>
-      <span class="tag tag-purple">IC3 x Encode Club</span>
-      <span class="tag tag-green">$10K Prize Pool &rarr; $50K Accelerator</span>
-    </div>
   </div>
 
 </div>
@@ -944,7 +889,7 @@ web/                         # React + Vite verification frontend</div>
 <div class="nav">
   <button id="prev" aria-label="Previous slide">&#8592;</button>
   <div class="dots" id="dots"></div>
-  <span class="counter" id="counter">1 / 15</span>
+  <span class="counter" id="counter">1 / 14</span>
   <button id="next" aria-label="Next slide">&#8594;</button>
 </div>
 
@@ -953,12 +898,12 @@ web/                         # React + Vite verification frontend</div>
     startOnLoad: true,
     theme: 'dark',
     themeVariables: {
-      primaryColor: '#3b82f6',
-      primaryTextColor: '#e4e4ef',
-      primaryBorderColor: '#1e1e2e',
-      lineColor: '#8888a0',
-      secondaryColor: '#13131a',
-      tertiaryColor: '#1e1e2e',
+      primaryColor: '#4ade80',
+      primaryTextColor: '#e8f0e4',
+      primaryBorderColor: '#1e3a28',
+      lineColor: '#8aaa8a',
+      secondaryColor: '#0f2216',
+      tertiaryColor: '#14291c',
       fontFamily: 'Inter, sans-serif',
       fontSize: '14px',
     }
@@ -977,7 +922,6 @@ web/                         # React + Vite verification frontend</div>
     'Revenue Projections',
     'TEE Comparison',
     'Demo Video',
-    'Pricing',
     'Roadmap',
     'The Ask'
   ];
